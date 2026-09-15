@@ -1,0 +1,2865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="KisanMandi - Digital Mandi Platform for Indian Farmers">
+
+    <title>KisanMandi | Digital Mandi Platform</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+        
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+
+<body>
+
+<!-- =========================================
+     TOP BAR
+========================================= -->
+
+<div class="topbar">
+    🌾 किसानमंडी • किसान के लिए सही भाव, सही बाजार
+</div>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+    <a href="#home" class="brand">
+        <span>🌾</span>
+        <strong>
+            Kisan<span>Mandi</span>
+        </strong>
+    </a>
+
+
+    <nav id="navLinks">
+
+        <a href="#home">Home</a>
+
+        <a href="#prices">
+            Mandi Prices
+        </a>
+
+        <a href="#crops">
+            Crops
+        </a>
+
+        <a href="#buyers">
+            Buyers
+        </a>
+
+        <a href="#sell">
+            Sell Crop
+        </a>
+
+        <a href="#trends">
+            Market Trends
+        </a>
+
+        <a href="#weather">
+            Weather
+        </a>
+
+        <a href="#schemes">
+            Schemes
+        </a>
+
+    </nav>
+
+
+    <button
+        class="login-btn"
+        onclick="openModal('loginModal')">
+
+        Login / Register
+
+    </button>
+
+
+    <button
+        class="menu-btn"
+        onclick="toggleMenu()">
+
+        ☰
+
+    </button>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main>
+
+
+<!-- =========================================
+     HERO SECTION
+========================================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-copy">
+
+        <div class="eyebrow">
+            🇮🇳 भारत का डिजिटल मंडी साथी
+        </div>
+
+
+        <h1>
+
+            Apni Fasal Ka
+
+            <br>
+
+            <span>Sahi Bhav</span>
+
+            Janiye
+
+        </h1>
+
+
+        <p>
+
+            Compare mandi prices, find verified buyers
+            and sell your crops at the best available
+            market price.
+
+        </p>
+
+
+        <div class="hero-actions">
+
+            <a
+                href="#prices"
+                class="primary">
+
+                Check Mandi Prices →
+
+            </a>
+
+
+            <a
+                href="#sell"
+                class="secondary">
+
+                Sell Your Crop
+
+            </a>
+
+        </div>
+
+
+        <div class="trust-row">
+
+            <span>
+                ✓ Live price dashboard
+            </span>
+
+            <span>
+                ✓ Verified buyers
+            </span>
+
+            <span>
+                ✓ Farmer-first design
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO ART -->
+
+    <div class="hero-art">
+
+        <div class="sun"></div>
+
+        <div class="field field1"></div>
+
+        <div class="field field2"></div>
+
+        <div class="farmer">
+            👨‍🌾
+        </div>
+
+        <div class="crop crop1">
+            🌾
+        </div>
+
+        <div class="crop crop2">
+            🌽
+        </div>
+
+
+        <div class="price-float">
+
+            <small>
+                आज का गेहूं भाव
+            </small>
+
+            <b>
+                ₹2,450
+            </b>
+
+            <span>
+                ↑ 4.8%
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     QUICK SEARCH
+========================================= -->
+
+<section class="quick-search">
+
+    <div class="search-heading">
+
+        <span class="live-dot"></span>
+
+        <div>
+
+            <b>
+                Find Today's Mandi Price
+            </b>
+
+            <small>
+                आज का मंडी भाव खोजें
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <input
+        id="heroCrop"
+        type="text"
+        placeholder="🔎 Search crop e.g. Wheat">
+
+
+    <select>
+
+        <option>
+            Select State
+        </option>
+
+        <option>
+            Madhya Pradesh
+        </option>
+
+        <option>
+            Maharashtra
+        </option>
+
+        <option>
+            Rajasthan
+        </option>
+
+        <option>
+            Uttar Pradesh
+        </option>
+
+    </select>
+
+
+    <select>
+
+        <option>
+            Select District
+        </option>
+
+        <option>
+            Jabalpur
+        </option>
+
+        <option>
+            Indore
+        </option>
+
+        <option>
+            Bhopal
+        </option>
+
+        <option>
+            Nagpur
+        </option>
+
+    </select>
+
+
+    <select>
+
+        <option>
+            Select Mandi
+        </option>
+
+        <option>
+            Jabalpur Mandi
+        </option>
+
+        <option>
+            Indore Mandi
+        </option>
+
+        <option>
+            Seoni Mandi
+        </option>
+
+    </select>
+
+
+    <button
+        class="primary"
+        onclick="scrollToPrices()">
+
+        Check Price
+
+    </button>
+
+</section>
+
+
+
+<!-- =========================================
+     MANDI PRICE SECTION
+========================================= -->
+
+<section id="prices" class="section">
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="eyebrow">
+                LIVE MARKET • मंडी भाव
+            </div>
+
+            <h2>
+                Today's Mandi Prices
+            </h2>
+
+            <p>
+                Demo market data • Last updated today
+                at 10:42 AM
+            </p>
+
+        </div>
+
+
+        <button
+            class="outline"
+            onclick="refreshPrices()">
+
+            ↻ Refresh Prices
+
+        </button>
+
+    </div>
+
+
+
+    <!-- PRICE STATISTICS -->
+
+    <div class="stats-grid">
+
+
+        <div class="stat">
+
+            <span>🌾</span>
+
+            <small>
+                Wheat / गेहूं
+            </small>
+
+            <b>
+                ₹2,450
+            </b>
+
+            <em class="up">
+                ↑ 4.8%
+            </em>
+
+        </div>
+
+
+
+        <div class="stat">
+
+            <span>🫘</span>
+
+            <small>
+                Soybean / सोयाबीन
+            </small>
+
+            <b>
+                ₹4,680
+            </b>
+
+            <em class="up">
+                ↑ 2.1%
+            </em>
+
+        </div>
+
+
+
+        <div class="stat">
+
+            <span>🌽</span>
+
+            <small>
+                Maize / मक्का
+            </small>
+
+            <b>
+                ₹2,120
+            </b>
+
+            <em class="down">
+                ↓ 1.4%
+            </em>
+
+        </div>
+
+
+
+        <div class="stat">
+
+            <span>🧅</span>
+
+            <small>
+                Onion / प्याज
+            </small>
+
+            <b>
+                ₹1,920
+            </b>
+
+            <em class="up">
+                ↑ 6.2%
+            </em>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- PRICE TABLE -->
+
+    <div class="table-wrap">
+
+        <table id="priceTable">
+
+            <thead>
+
+                <tr>
+
+                    <th>Crop</th>
+
+                    <th>Variety</th>
+
+                    <th>Mandi</th>
+
+                    <th>State</th>
+
+                    <th>Min</th>
+
+                    <th>Max</th>
+
+                    <th>Modal</th>
+
+                    <th>Trend</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                <tr>
+
+                    <td>
+                        🌾 <b>Wheat</b>
+                        <small>गेहूं</small>
+                    </td>
+
+                    <td>
+                        Lokwan
+                    </td>
+
+                    <td>
+                        Indore
+                    </td>
+
+                    <td>
+                        MP
+                    </td>
+
+                    <td>
+                        ₹2,200
+                    </td>
+
+                    <td>
+                        ₹2,620
+                    </td>
+
+                    <td>
+                        <strong>
+                            ₹2,450
+                        </strong>
+                    </td>
+
+                    <td class="up">
+                        ↑ 4.8%
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <td>
+                        🫘 <b>Soybean</b>
+                        <small>सोयाबीन</small>
+                    </td>
+
+                    <td>
+                        Yellow
+                    </td>
+
+                    <td>
+                        Jabalpur
+                    </td>
+
+                    <td>
+                        MP
+                    </td>
+
+                    <td>
+                        ₹4,300
+                    </td>
+
+                    <td>
+                        ₹4,900
+                    </td>
+
+                    <td>
+                        <strong>
+                            ₹4,680
+                        </strong>
+                    </td>
+
+                    <td class="up">
+                        ↑ 2.1%
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <td>
+                        🌽 <b>Maize</b>
+                        <small>मक्का</small>
+                    </td>
+
+                    <td>
+                        Yellow
+                    </td>
+
+                    <td>
+                        Nagpur
+                    </td>
+
+                    <td>
+                        MH
+                    </td>
+
+                    <td>
+                        ₹1,950
+                    </td>
+
+                    <td>
+                        ₹2,280
+                    </td>
+
+                    <td>
+                        <strong>
+                            ₹2,120
+                        </strong>
+                    </td>
+
+                    <td class="down">
+                        ↓ 1.4%
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <td>
+                        🌱 <b>Mustard</b>
+                        <small>सरसों</small>
+                    </td>
+
+                    <td>
+                        Black
+                    </td>
+
+                    <td>
+                        Kota
+                    </td>
+
+                    <td>
+                        RJ
+                    </td>
+
+                    <td>
+                        ₹5,150
+                    </td>
+
+                    <td>
+                        ₹5,620
+                    </td>
+
+                    <td>
+                        <strong>
+                            ₹5,430
+                        </strong>
+                    </td>
+
+                    <td class="up">
+                        ↑ 3.6%
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <td>
+                        🥔 <b>Potato</b>
+                        <small>आलू</small>
+                    </td>
+
+                    <td>
+                        Jyoti
+                    </td>
+
+                    <td>
+                        Agra
+                    </td>
+
+                    <td>
+                        UP
+                    </td>
+
+                    <td>
+                        ₹1,200
+                    </td>
+
+                    <td>
+                        ₹1,680
+                    </td>
+
+                    <td>
+                        <strong>
+                            ₹1,480
+                        </strong>
+                    </td>
+
+                    <td class="up">
+                        ↑ 1.9%
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <td>
+                        🍅 <b>Tomato</b>
+                        <small>टमाटर</small>
+                    </td>
+
+                    <td>
+                        Hybrid
+                    </td>
+
+                    <td>
+                        Azadpur
+                    </td>
+
+                    <td>
+                        DL
+                    </td>
+
+                    <td>
+                        ₹1,700
+                    </td>
+
+                    <td>
+                        ₹2,500
+                    </td>
+
+                    <td>
+                        <strong>
+                            ₹2,150
+                        </strong>
+                    </td>
+
+                    <td class="down">
+                        ↓ 2.7%
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FILTER SECTION
+========================================= -->
+
+<section class="filter-panel section-light">
+
+    <div>
+
+        <div class="eyebrow">
+            SEARCH • खोजें
+        </div>
+
+        <h2>
+            Compare Markets
+        </h2>
+
+    </div>
+
+
+    <div class="filters">
+
+        <input
+            id="cropFilter"
+            placeholder="Crop name">
+
+
+        <select>
+
+            <option>
+                All States
+            </option>
+
+            <option>
+                Madhya Pradesh
+            </option>
+
+            <option>
+                Maharashtra
+            </option>
+
+            <option>
+                Rajasthan
+            </option>
+
+        </select>
+
+
+        <select>
+
+            <option>
+                All Mandis
+            </option>
+
+            <option>
+                Jabalpur
+            </option>
+
+            <option>
+                Indore
+            </option>
+
+            <option>
+                Kota
+            </option>
+
+        </select>
+
+
+        <select>
+
+            <option>
+                Any Variety
+            </option>
+
+            <option>
+                Lokwan
+            </option>
+
+            <option>
+                Yellow
+            </option>
+
+            <option>
+                Hybrid
+            </option>
+
+        </select>
+
+
+        <button
+            class="primary"
+            onclick="filterPrices()">
+
+            Apply Filters
+
+        </button>
+
+
+        <button
+            class="outline"
+            onclick="resetFilter()">
+
+            Reset
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     INDIA MANDI MAP
+========================================= -->
+
+<section class="section map-section">
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="eyebrow">
+                MANDI NETWORK • मंडी नेटवर्क
+            </div>
+
+            <h2>
+                Explore India's Mandi Network
+            </h2>
+
+            <p>
+                Select a state to explore sample mandi
+                information.
+            </p>
+
+        </div>
+
+
+        <span class="map-pill">
+            ● 128 Active Mandis
+        </span>
+
+    </div>
+
+
+
+    <div class="map-layout">
+
+
+        <!-- MAP -->
+
+        <div class="india-map">
+
+            <div class="map-title">
+                INDIA
+            </div>
+
+
+            <button
+                class="marker m1"
+                onclick="showMandi('Madhya Pradesh')">
+                ●
+            </button>
+
+
+            <button
+                class="marker m2"
+                onclick="showMandi('Maharashtra')">
+                ●
+            </button>
+
+
+            <button
+                class="marker m3"
+                onclick="showMandi('Rajasthan')">
+                ●
+            </button>
+
+
+            <button
+                class="marker m4"
+                onclick="showMandi('Uttar Pradesh')">
+                ●
+            </button>
+
+
+            <button
+                class="marker m5"
+                onclick="showMandi('Punjab')">
+                ●
+            </button>
+
+
+            <button
+                class="marker m6"
+                onclick="showMandi('Gujarat')">
+                ●
+            </button>
+
+
+            <div class="map-hint">
+                Click a marker
+            </div>
+
+        </div>
+
+
+
+        <!-- MANDI INFO -->
+
+        <div
+            class="mandi-info"
+            id="mandiInfo">
+
+
+            <div class="info-icon">
+                📍
+            </div>
+
+
+            <div>
+
+                <span>
+                    SELECTED MANDI
+                </span>
+
+                <h3>
+                    Jabalpur Mandi
+                </h3>
+
+                <p>
+                    Jabalpur, Madhya Pradesh
+                </p>
+
+            </div>
+
+
+            <div class="info-grid">
+
+
+                <div>
+
+                    <small>
+                        Top Crop
+                    </small>
+
+                    <b>
+                        Soybean
+                    </b>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        Modal Price
+                    </small>
+
+                    <b>
+                        ₹4,680/q
+                    </b>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        Today's Arrival
+                    </small>
+
+                    <b>
+                        1,240 q
+                    </b>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        Active Buyers
+                    </small>
+
+                    <b>
+                        48
+                    </b>
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                class="outline full"
+                onclick="openMandiDetails()">
+
+                View Mandi Details →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     POPULAR CROPS
+========================================= -->
+
+<section
+    id="crops"
+    class="section section-light">
+
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="eyebrow">
+                CROP PRICES • फसल भाव
+            </div>
+
+            <h2>
+                Popular Crops
+            </h2>
+
+        </div>
+
+
+        <a
+            class="text-link"
+            href="#prices">
+
+            View all crops →
+
+        </a>
+
+    </div>
+
+
+
+    <div class="crop-grid">
+
+
+        <!-- WHEAT -->
+
+        <article class="crop-card">
+
+            <div class="crop-icon">
+                🌾
+            </div>
+
+            <h3>
+                Wheat
+            </h3>
+
+            <small>
+                गेहूं
+            </small>
+
+            <b>
+                ₹2,450
+                <span>/q</span>
+            </b>
+
+            <em class="up">
+                +4.8%
+            </em>
+
+            <div class="mini-chart bars">
+
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+
+            </div>
+
+            <p>
+                Best: Indore Mandi
+            </p>
+
+            <button
+                onclick="openCrop('Wheat')">
+
+                View Details
+
+            </button>
+
+        </article>
+
+
+
+        <!-- SOYBEAN -->
+
+        <article class="crop-card">
+
+            <div class="crop-icon">
+                🫘
+            </div>
+
+            <h3>
+                Soybean
+            </h3>
+
+            <small>
+                सोयाबीन
+            </small>
+
+            <b>
+                ₹4,680
+                <span>/q</span>
+            </b>
+
+            <em class="up">
+                +2.1%
+            </em>
+
+            <div class="mini-chart bars">
+
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+
+            </div>
+
+            <p>
+                Best: Jabalpur Mandi
+            </p>
+
+            <button
+                onclick="openCrop('Soybean')">
+
+                View Details
+
+            </button>
+
+        </article>
+
+
+
+        <!-- MAIZE -->
+
+        <article class="crop-card">
+
+            <div class="crop-icon">
+                🌽
+            </div>
+
+            <h3>
+                Maize
+            </h3>
+
+            <small>
+                मक्का
+            </small>
+
+            <b>
+                ₹2,120
+                <span>/q</span>
+            </b>
+
+            <em class="down">
+                -1.4%
+            </em>
+
+            <div class="mini-chart bars">
+
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+
+            </div>
+
+            <p>
+                Best: Nagpur Mandi
+            </p>
+
+            <button
+                onclick="openCrop('Maize')">
+
+                View Details
+
+            </button>
+
+        </article>
+
+
+
+        <!-- MUSTARD -->
+
+        <article class="crop-card">
+
+            <div class="crop-icon">
+                🌱
+            </div>
+
+            <h3>
+                Mustard
+            </h3>
+
+            <small>
+                सरसों
+            </small>
+
+            <b>
+                ₹5,430
+                <span>/q</span>
+            </b>
+
+            <em class="up">
+                +3.6%
+            </em>
+
+            <div class="mini-chart bars">
+
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+
+            </div>
+
+            <p>
+                Best: Kota Mandi
+            </p>
+
+            <button
+                onclick="openCrop('Mustard')">
+
+                View Details
+
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PRICE CHART
+========================================= -->
+
+<section
+    id="trends"
+    class="section">
+
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="eyebrow">
+                MARKET ANALYTICS • बाजार विश्लेषण
+            </div>
+
+            <h2>
+                Price Trends
+            </h2>
+
+        </div>
+
+
+        <div class="range-tabs">
+
+            <button
+                class="active"
+                onclick="setRange(this,'7D')">
+
+                7 Days
+
+            </button>
+
+            <button
+                onclick="setRange(this,'30D')">
+
+                30 Days
+
+            </button>
+
+            <button
+                onclick="setRange(this,'3M')">
+
+                3 Months
+
+            </button>
+
+            <button
+                onclick="setRange(this,'1Y')">
+
+                1 Year
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="chart-card">
+
+
+        <div class="chart-top">
+
+            <div>
+
+                <small>
+                    Wheat / गेहूं
+                </small>
+
+                <h3>
+                    ₹2,450
+
+                    <span class="up">
+                        +4.8%
+                    </span>
+
+                </h3>
+
+            </div>
+
+
+            <select
+                id="chartCrop"
+                onchange="drawChart()">
+
+                <option>
+                    Wheat
+                </option>
+
+                <option>
+                    Soybean
+                </option>
+
+                <option>
+                    Maize
+                </option>
+
+                <option>
+                    Mustard
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <div class="chart">
+
+            <div class="ylabels">
+
+                <span>₹2,600</span>
+
+                <span>₹2,450</span>
+
+                <span>₹2,300</span>
+
+                <span>₹2,150</span>
+
+                <span>₹2,000</span>
+
+            </div>
+
+
+            <svg
+                viewBox="0 0 800 300"
+                preserveAspectRatio="none">
+
+                <defs>
+
+                    <linearGradient
+                        id="fill"
+                        x1="0"
+                        x2="0"
+                        y1="0"
+                        y2="1">
+
+                        <stop
+                            offset="0"
+                            stop-opacity=".28"/>
+
+                        <stop
+                            offset="1"
+                            stop-opacity="0"/>
+
+                    </linearGradient>
+
+                </defs>
+
+
+                <path
+                    id="area"
+                    d="M0 230 L80 205 L160 215 L240 170 L320 185 L400 135 L480 150 L560 105 L640 125 L720 70 L800 85 L800 300 L0 300 Z">
+                </path>
+
+
+                <polyline
+                    id="line"
+                    points="0,230 80,205 160,215 240,170 320,185 400,135 480,150 560,105 640,125 720,70 800,85">
+                </polyline>
+
+            </svg>
+
+
+            <div class="xlabels">
+
+                <span>Sep 10</span>
+                <span>Sep 11</span>
+                <span>Sep 12</span>
+                <span>Sep 13</span>
+                <span>Sep 14</span>
+                <span>Sep 15</span>
+                <span>Today</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SELL CROP
+========================================= -->
+
+<section
+    id="sell"
+    class="section sell-section">
+
+
+    <div class="sell-copy">
+
+        <div class="eyebrow">
+            SELL DIRECT • सीधे बेचें
+        </div>
+
+
+        <h2>
+            Apni Fasal Directly
+            Buyers Ko Bechein
+        </h2>
+
+
+        <p>
+            List your crop once and connect with
+            verified buyers looking for your produce.
+        </p>
+
+
+        <div class="sell-benefits">
+
+            <span>
+                ✓ No middleman hassle
+            </span>
+
+            <span>
+                ✓ Compare buyer offers
+            </span>
+
+            <span>
+                ✓ Choose your price
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SELL FORM -->
+
+    <form
+        id="sellForm"
+        class="form-card"
+        onsubmit="listCrop(event)">
+
+
+        <h3>
+            🌾 List Your Crop
+        </h3>
+
+
+        <div class="form-grid">
+
+
+            <input
+                required
+                placeholder="Farmer Name">
+
+
+            <input
+                required
+                placeholder="Mobile Number"
+                pattern="[0-9]{10}">
+
+
+            <select required>
+
+                <option value="">
+                    Select Crop
+                </option>
+
+                <option>
+                    Wheat
+                </option>
+
+                <option>
+                    Soybean
+                </option>
+
+                <option>
+                    Maize
+                </option>
+
+                <option>
+                    Rice
+                </option>
+
+            </select>
+
+
+            <input
+                required
+                type="number"
+                placeholder="Quantity (Quintal)">
+
+
+            <input
+                required
+                type="number"
+                placeholder="Expected Price ₹/q">
+
+
+            <select required>
+
+                <option value="">
+                    Select State
+                </option>
+
+                <option>
+                    Madhya Pradesh
+                </option>
+
+                <option>
+                    Maharashtra
+                </option>
+
+                <option>
+                    Rajasthan
+                </option>
+
+            </select>
+
+
+            <input
+                type="date">
+
+
+            <input
+                type="file"
+                accept="image/*">
+
+        </div>
+
+
+        <button class="primary full">
+
+            List My Crop →
+
+        </button>
+
+
+        <small class="form-note">
+
+            🔒 Your information stays private
+            in this demo.
+
+        </small>
+
+    </form>
+
+</section>
+
+
+
+<!-- =========================================
+     BUYERS
+========================================= -->
+
+<section
+    id="buyers"
+    class="section section-light">
+
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="eyebrow">
+                BUYER MARKETPLACE • खरीदार
+            </div>
+
+            <h2>
+                Verified Buyers Near You
+            </h2>
+
+        </div>
+
+
+        <button class="outline">
+
+            View All Buyers →
+
+        </button>
+
+    </div>
+
+
+
+    <div class="buyer-grid">
+
+
+        <!-- BUYER 1 -->
+
+        <article class="buyer">
+
+            <div class="avatar">
+                AG
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    AgroGrow Foods
+
+                    <span>
+                        ✓ Verified
+                    </span>
+
+                </h3>
+
+                <p>
+                    Indore, MP
+                </p>
+
+            </div>
+
+
+            <div class="need">
+
+                <small>
+                    Looking for
+                </small>
+
+                <b>
+                    Wheat • 500 q
+                </b>
+
+            </div>
+
+
+            <div class="offer">
+
+                <small>
+                    Offer
+                </small>
+
+                <b>
+                    ₹2,520/q
+                </b>
+
+            </div>
+
+
+            <button
+                class="primary"
+                onclick="toast('Buyer contact request sent!')">
+
+                Contact Buyer
+
+            </button>
+
+        </article>
+
+
+
+        <!-- BUYER 2 -->
+
+        <article class="buyer">
+
+            <div class="avatar">
+                KP
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    KisanPro Traders
+
+                    <span>
+                        ✓ Verified
+                    </span>
+
+                </h3>
+
+                <p>
+                    Jabalpur, MP
+                </p>
+
+            </div>
+
+
+            <div class="need">
+
+                <small>
+                    Looking for
+                </small>
+
+                <b>
+                    Soybean • 300 q
+                </b>
+
+            </div>
+
+
+            <div class="offer">
+
+                <small>
+                    Offer
+                </small>
+
+                <b>
+                    ₹4,760/q
+                </b>
+
+            </div>
+
+
+            <button
+                class="primary"
+                onclick="toast('Buyer contact request sent!')">
+
+                Contact Buyer
+
+            </button>
+
+        </article>
+
+
+
+        <!-- BUYER 3 -->
+
+        <article class="buyer">
+
+            <div class="avatar">
+                BH
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    Bharat Harvest
+
+                    <span>
+                        ✓ Verified
+                    </span>
+
+                </h3>
+
+                <p>
+                    Nagpur, MH
+                </p>
+
+            </div>
+
+
+            <div class="need">
+
+                <small>
+                    Looking for
+                </small>
+
+                <b>
+                    Maize • 800 q
+                </b>
+
+            </div>
+
+
+            <div class="offer">
+
+                <small>
+                    Offer
+                </small>
+
+                <b>
+                    ₹2,180/q
+                </b>
+
+            </div>
+
+
+            <button
+                class="primary"
+                onclick="toast('Buyer contact request sent!')">
+
+                Contact Buyer
+
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     WEATHER
+========================================= -->
+
+<section
+    id="weather"
+    class="section weather-section">
+
+
+    <div>
+
+        <div class="eyebrow">
+            FARM WEATHER • मौसम
+        </div>
+
+
+        <h2>
+            Weather for Farmers
+        </h2>
+
+
+        <p>
+            Plan harvesting, irrigation and transport
+            with local weather insights.
+        </p>
+
+
+        <div class="weather-main">
+
+
+            <div class="big-weather">
+
+                ☀️
+
+                <strong>
+                    29°
+                </strong>
+
+                <small>
+                    Jabalpur, MP
+                </small>
+
+            </div>
+
+
+            <div class="weather-stat">
+
+                <span>💧</span>
+
+                <b>
+                    64%
+                </b>
+
+                <small>
+                    Humidity
+                </small>
+
+            </div>
+
+
+            <div class="weather-stat">
+
+                <span>🌧️</span>
+
+                <b>
+                    20%
+                </b>
+
+                <small>
+                    Rain chance
+                </small>
+
+            </div>
+
+
+            <div class="weather-stat">
+
+                <span>💨</span>
+
+                <b>
+                    12 km/h
+                </b>
+
+                <small>
+                    Wind
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="alert">
+
+            ⚠️
+
+            <div>
+
+                <b>
+                    Farming Alert
+                </b>
+
+                <p>
+                    Rain may arrive tomorrow evening.
+                    Consider completing harvesting today.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FORECAST -->
+
+    <div class="forecast">
+
+        <h3>
+            5-Day Forecast
+        </h3>
+
+
+        <div class="day">
+
+            <b>
+                Today
+            </b>
+
+            <span>
+                ☀️
+            </span>
+
+            <strong>
+                29° / 20°
+            </strong>
+
+        </div>
+
+
+        <div class="day">
+
+            <b>
+                Thu
+            </b>
+
+            <span>
+                🌦️
+            </span>
+
+            <strong>
+                27° / 21°
+            </strong>
+
+        </div>
+
+
+        <div class="day">
+
+            <b>
+                Fri
+            </b>
+
+            <span>
+                🌧️
+            </span>
+
+            <strong>
+                25° / 20°
+            </strong>
+
+        </div>
+
+
+        <div class="day">
+
+            <b>
+                Sat
+            </b>
+
+            <span>
+                ⛅
+            </span>
+
+            <strong>
+                28° / 19°
+            </strong>
+
+        </div>
+
+
+        <div class="day">
+
+            <b>
+                Sun
+            </b>
+
+            <span>
+                ☀️
+            </span>
+
+            <strong>
+                30° / 20°
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     MARKET ARRIVAL
+========================================= -->
+
+<section
+    class="section section-light arrivals">
+
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="eyebrow">
+                ARRIVALS • आवक
+            </div>
+
+            <h2>
+                Market Arrival Data
+            </h2>
+
+        </div>
+
+
+        <span class="date-chip">
+            16 Sep 2026
+        </span>
+
+    </div>
+
+
+
+    <div class="arrival-grid">
+
+
+        <div class="arrival">
+
+            <span>
+                Wheat
+            </span>
+
+            <b>
+                2,840 q
+            </b>
+
+            <div>
+                <i style="width:78%"></i>
+            </div>
+
+            <small>
+                +12.4% vs yesterday
+            </small>
+
+        </div>
+
+
+        <div class="arrival">
+
+            <span>
+                Soybean
+            </span>
+
+            <b>
+                1,240 q
+            </b>
+
+            <div>
+                <i style="width:54%"></i>
+            </div>
+
+            <small>
+                +5.2% vs yesterday
+            </small>
+
+        </div>
+
+
+        <div class="arrival">
+
+            <span>
+                Maize
+            </span>
+
+            <b>
+                3,120 q
+            </b>
+
+            <div>
+                <i style="width:86%"></i>
+            </div>
+
+            <small>
+                -2.1% vs yesterday
+            </small>
+
+        </div>
+
+
+        <div class="arrival">
+
+            <span>
+                Mustard
+            </span>
+
+            <b>
+                980 q
+            </b>
+
+            <div>
+                <i style="width:40%"></i>
+            </div>
+
+            <small>
+                +8.7% vs yesterday
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     MARKET TRENDS
+========================================= -->
+
+<section class="section trends-cards">
+
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="eyebrow">
+                AT A GLANCE • एक नजर में
+            </div>
+
+            <h2>
+                Market Trends Today
+            </h2>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="trend-grid">
+
+
+        <div>
+
+            <span>🔥</span>
+
+            <small>
+                Highest Rising
+            </small>
+
+            <b>
+                Onion
+            </b>
+
+            <em>
+                +6.2%
+            </em>
+
+        </div>
+
+
+        <div>
+
+            <span>📉</span>
+
+            <small>
+                Biggest Falling
+            </small>
+
+            <b>
+                Tomato
+            </b>
+
+            <em>
+                -2.7%
+            </em>
+
+        </div>
+
+
+        <div>
+
+            <span>💰</span>
+
+            <small>
+                Highest Price
+            </small>
+
+            <b>
+                Mustard
+            </b>
+
+            <em>
+                ₹5,430/q
+            </em>
+
+        </div>
+
+
+        <div>
+
+            <span>🚜</span>
+
+            <small>
+                Highest Arrival
+            </small>
+
+            <b>
+                Maize
+            </b>
+
+            <em>
+                3,120 q
+            </em>
+
+        </div>
+
+
+        <div>
+
+            <span>⭐</span>
+
+            <small>
+                Best Mandi
+            </small>
+
+            <b>
+                Indore
+            </b>
+
+            <em>
+                Wheat ₹2,450
+            </em>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     GOVERNMENT SCHEMES
+========================================= -->
+
+<section
+    id="schemes"
+    class="section schemes">
+
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="eyebrow">
+                GOVERNMENT SUPPORT • सरकारी योजनाएं
+            </div>
+
+            <h2>
+                Government Schemes
+            </h2>
+
+            <p>
+                Useful agriculture schemes and farmer
+                support programs.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="scheme-grid">
+
+
+        <article>
+
+            <span>💳</span>
+
+            <h3>
+                PM-KISAN
+            </h3>
+
+            <p>
+                Income support for eligible farmer families.
+            </p>
+
+            <a
+                href="https://pmkisan.gov.in/"
+                target="_blank">
+
+                Learn More ↗
+
+            </a>
+
+        </article>
+
+
+
+        <article>
+
+            <span>🛡️</span>
+
+            <h3>
+                PM Fasal Bima Yojana
+            </h3>
+
+            <p>
+                Crop insurance against eligible
+                natural risks.
+            </p>
+
+            <a
+                href="https://pmfby.gov.in/"
+                target="_blank">
+
+                Learn More ↗
+
+            </a>
+
+        </article>
+
+
+
+        <article>
+
+            <span>🏪</span>
+
+            <h3>
+                e-NAM
+            </h3>
+
+            <p>
+                National electronic marketplace for
+                agricultural commodities.
+            </p>
+
+            <a
+                href="https://www.enam.gov.in/"
+                target="_blank">
+
+                Learn More ↗
+
+            </a>
+
+        </article>
+
+
+
+        <article>
+
+            <span>🏦</span>
+
+            <h3>
+                Kisan Credit Card
+            </h3>
+
+            <p>
+                Credit support for agricultural
+                and allied needs.
+            </p>
+
+            <a href="#">
+                Learn More →
+            </a>
+
+        </article>
+
+
+
+        <article>
+
+            <span>🧪</span>
+
+            <h3>
+                Soil Health Card
+            </h3>
+
+            <p>
+                Understand soil nutrients and
+                recommended inputs.
+            </p>
+
+            <a href="#">
+                Learn More →
+            </a>
+
+        </article>
+
+
+
+        <article>
+
+            <span>💧</span>
+
+            <h3>
+                PM Krishi Sinchai Yojana
+            </h3>
+
+            <p>
+                Support for irrigation and
+                water-use efficiency.
+            </p>
+
+            <a href="#">
+                Learn More →
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PRICE ALERT
+========================================= -->
+
+<section class="section alert-section">
+
+
+    <div class="alert-copy">
+
+        <div class="eyebrow">
+            PRICE ALERT • भाव अलर्ट
+        </div>
+
+        <h2>
+            Never Miss a Good Price
+        </h2>
+
+        <p>
+            Get notified when your target mandi
+            price is reached.
+        </p>
+
+    </div>
+
+
+    <form
+        class="alert-form"
+        onsubmit="setAlert(event)">
+
+
+        <select>
+
+            <option>
+                Wheat / गेहूं
+            </option>
+
+            <option>
+                Soybean / सोयाबीन
+            </option>
+
+            <option>
+                Maize / मक्का
+            </option>
+
+        </select>
+
+
+        <select>
+
+            <option>
+                Jabalpur Mandi
+            </option>
+
+            <option>
+                Indore Mandi
+            </option>
+
+        </select>
+
+
+        <input
+            type="number"
+            value="2500"
+            placeholder="Target ₹/q">
+
+
+        <select>
+
+            <option>
+                Browser notification
+            </option>
+
+            <option>
+                SMS
+            </option>
+
+        </select>
+
+
+        <button class="primary">
+
+            Set Price Alert
+
+        </button>
+
+    </form>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+
+    <div class="footer-main">
+
+
+        <div>
+
+            <a
+                class="brand"
+                href="#home">
+
+                <span>🌾</span>
+
+                <strong>
+                    Kisan<span>Mandi</span>
+                </strong>
+
+            </a>
+
+            <p>
+                Digital tools for better decisions
+                in Indian agriculture.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Platform
+            </h4>
+
+            <a href="#prices">
+                Mandi Prices
+            </a>
+
+            <a href="#buyers">
+                Buyers
+            </a>
+
+            <a href="#sell">
+                Sell Crop
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Support
+            </h4>
+
+            <a href="#schemes">
+                Government Schemes
+            </a>
+
+            <a href="#weather">
+                Weather
+            </a>
+
+            <a href="#">
+                Help Center
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Contact
+            </h4>
+
+            <p>
+                Farmer Helpline
+            </p>
+
+            <b>
+                1800-XXX-XXXX
+            </b>
+
+            <p>
+                support@kisanmandi.demo
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 KisanMandi • Demo Frontend
+        </span>
+
+        <span>
+            Privacy • Terms • Accessibility
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     LOGIN MODAL
+========================================= -->
+
+<div
+    class="modal"
+    id="loginModal">
+
+
+    <div class="modal-box">
+
+
+        <button
+            class="close"
+            onclick="closeModal('loginModal')">
+
+            ×
+
+        </button>
+
+
+        <div class="modal-icon">
+            🌾
+        </div>
+
+
+        <h2>
+            Welcome to KisanMandi
+        </h2>
+
+
+        <p>
+            Login to manage your crops, alerts
+            and mandi preferences.
+        </p>
+
+
+        <input
+            placeholder="Mobile Number">
+
+
+        <input
+            type="password"
+            placeholder="Enter OTP / Password">
+
+
+        <button
+            class="primary full"
+            onclick="loginDemo()">
+
+            Continue
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     DETAIL MODAL
+========================================= -->
+
+<div
+    class="modal"
+    id="detailModal">
+
+
+    <div class="modal-box">
+
+
+        <button
+            class="close"
+            onclick="closeModal('detailModal')">
+
+            ×
+
+        </button>
+
+
+        <div id="detailContent"></div>
+
+    </div>
+
+</div>
+
+
+
+<!-- TOAST -->
+
+<div id="toast" class="toast"></div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
